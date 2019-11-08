@@ -19,12 +19,12 @@ $("#js-shopping-list-form").on('submit', function(event){
 
     });
 
-$(".shopping-item-toggle").on("click", function(event){
+$("body").on("click", ".shopping-item-toggle", function(event){
   $(this).closest('li').find('.shopping-item')
   .toggleClass("shopping-item__checked");
 });
 
-$(".shopping-item-delete").click(function(){
+$("body").on("click", ".shopping-item-delete", function(){
   $(this).closest('li').remove();
 });
 
